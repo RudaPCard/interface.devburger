@@ -1,6 +1,11 @@
-import { Container } from "../../containers/Login/styles";
+import PropTypes from 'prop-types';
+import { ContainerButton } from "./styles";
 
-export function Button(info) {
-    console.log(info)
-    return <ContainerButton></ContainerButton>
+export function Button({ children, ...props }) {    
+    
+    return <ContainerButton {...props}>{children}</ContainerButton>
+}
+
+Button.propTypes = {
+    children: PropTypes.string,
 }
